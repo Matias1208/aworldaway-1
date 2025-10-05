@@ -1,0 +1,15 @@
+export const COLOR = {
+  bgFrom: "#0b1020",
+  bgVia:  "#0a0f1d",
+  bgTo:   "#090c16",
+  card:   "rgba(255,255,255,0.04)",
+  border: "rgba(255,255,255,0.10)",
+  text:   "#e5e7eb",
+  accent: "#22d3ee",
+  green:  "#34d399",
+  red:    "#f87171",
+  cyan:   "#06b6d4",
+  purple: "#a78bfa",
+  grid:   "#334155",
+  tick:   "#94a3b8",
+};

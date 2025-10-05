@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Tema / variables === */
+:root{
+  --bg: #0b1220;                 /* fondo base */
+  --card: rgba(17,24,39,.55);    /* panel semi-transparente (slate-900 con opacidad) */
+  --border: rgba(148,163,184,.18);
+}
+
+/* === Fondo “espacio” con gradientes + estrellas === */
+.bg-space{
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1200px 600px at 15% -10%, rgba(56,189,248,.18), transparent),
+    radial-gradient(900px 500px at 90% 0%, rgba(147,197,253,.14), transparent),
+    radial-gradient(700px 600px at 60% 120%, rgba(168,85,247,.06), transparent),
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>\
+  <rect fill='none' width='200' height='200'/>\
+  <g fill='white' opacity='0.22'>\
+    <circle cx='10' cy='18' r='0.7'/>\
+    <circle cx='70' cy='35' r='0.8'/>\
+    <circle cx='150' cy='20' r='0.6'/>\
+    <circle cx='120' cy='90' r='0.7'/>\
+    <circle cx='40' cy='120' r='0.6'/>\
+    <circle cx='180' cy='150' r='0.7'/>\
+    <circle cx='90' cy='170' r='0.6'/>\
+    <circle cx='170' cy='80' r='0.7'/>\
+  </g>\
+</svg>");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* === Utilidades de marca === */
+.text-gradient{
+  background-image: linear-gradient(90deg,#22d3ee,#60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.panel{
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 1rem;           /* 2xl */
+  backdrop-filter: blur(6px);
+}
+
+.kpi{
+  @apply p-4 md:p-6;
+}
+
+/* Botoncito reutilizable (opcional) */
+.btn{
+  @apply px-6 py-3 rounded-xl border text-cyan-200 transition;
+  border-color: rgba(34,211,238,.35);
+  background: rgba(34,211,238,.10);
+}
+.btn:hover{ background: rgba(34,211,238,.18); }

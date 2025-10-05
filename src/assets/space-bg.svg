@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 2400 1600">
+  <defs>
+    <radialGradient id="nebulaCyan" cx="85%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity=".18"></stop>
+      <stop offset="70%" stop-color="#0ea5e9" stop-opacity=".08"></stop>
+      <stop offset="100%" stop-color="#000014" stop-opacity="0"></stop>
+    </radialGradient>
+    <radialGradient id="nebulaPurple" cx="20%" cy="80%" r="65%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity=".18"></stop>
+      <stop offset="70%" stop-color="#7c3aed" stop-opacity=".08"></stop>
+      <stop offset="100%" stop-color="#000014" stop-opacity="0"></stop>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.6" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <g id="stars">
+      <circle cx="0" cy="0" r="1.1" fill="#fff" opacity=".95"></circle>
+      <circle cx="0" cy="0" r="0.8" fill="#cfe8ff" opacity=".85" transform="translate(3.2,-1.4)"></circle>
+      <circle cx="0" cy="0" r="0.6" fill="#fff" opacity=".6" transform="translate(-2.1,2.7)"></circle>
+    </g>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#070c1a"></rect>
+
+  <!-- Nebulosas suaves -->
+  <rect width="100%" height="100%" fill="url(#nebulaCyan)"></rect>
+  <rect width="100%" height="100%" fill="url(#nebulaPurple)"></rect>
+
+  <!-- Campo de estrellas pseudo-aleatorio -->
+  <g filter="url(#glow)" opacity=".95">
+    <!-- capa 1 -->
+    <g transform="translate(150,120)">
+      <use href="#stars" transform="translate(50,40)"></use>
+      <use href="#stars" transform="translate(220,130) scale(1.2)"></use>
+      <use href="#stars" transform="translate(410,80)"></use>
+      <use href="#stars" transform="translate(580,260)"></use>
+      <use href="#stars" transform="translate(760,140)"></use>
+      <use href="#stars" transform="translate(930,210)"></use>
+      <use href="#stars" transform="translate(1120,75)"></use>
+      <use href="#stars" transform="translate(1320,180)"></use>
+      <use href="#stars" transform="translate(1510,120)"></use>
+      <use href="#stars" transform="translate(1720,200)"></use>
+      <use href="#stars" transform="translate(1900,60)"></use>
+      <use href="#stars" transform="translate(2100,170)"></use>
+    </g>
+    <!-- capa 2 -->
+    <g transform="translate(120,-20) scale(1.2)">
+      <use href="#stars" transform="translate(120,420)"></use>
+      <use href="#stars" transform="translate(330,520)"></use>
+      <use href="#stars" transform="translate(540,460)"></use>
+      <use href="#stars" transform="translate(780,520)"></use>
+      <use href="#stars" transform="translate(980,430)"></use>
+      <use href="#stars" transform="translate(1200,560)"></use>
+      <use href="#stars" transform="translate(1480,480)"></use>
+      <use href="#stars" transform="translate(1700,560)"></use>
+      <use href="#stars" transform="translate(1960,450)"></use>
+      <use href="#stars" transform="translate(2180,560)"></use>
+    </g>
+    <!-- capa 3 -->
+    <g transform="translate(-40,160) scale(0.9)" opacity=".8">
+      <use href="#stars" transform="translate(90,850)"></use>
+      <use href="#stars" transform="translate(260,720)"></use>
+      <use href="#stars" transform="translate(520,940)"></use>
+      <use href="#stars" transform="translate(760,780)"></use>
+      <use href="#stars" transform="translate(980,900)"></use>
+      <use href="#stars" transform="translate(1200,740)"></use>
+      <use href="#stars" transform="translate(1380,920)"></use>
+      <use href="#stars" transform="translate(1600,780)"></use>
+      <use href="#stars" transform="translate(1840,940)"></use>
+      <use href="#stars" transform="translate(2100,820)"></use>
+    </g>
+  </g>
+</svg>
