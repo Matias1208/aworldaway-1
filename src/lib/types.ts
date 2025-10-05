@@ -17,3 +17,13 @@ export interface ExoplanetRow {
   koi_teq?: number;
   koi_score?: number;
 }
+// Re-export API types for convenience
+export type {
+  ExoplanetCandidate,
+  AnalysisResult,
+  ResearcherFeedback,
+  User,
+  AnalysisStatus,
+  FinalVerdict,
+  UserRole,
+} from './api-types';
